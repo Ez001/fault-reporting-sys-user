@@ -1,0 +1,96 @@
+body{
+   margin: -45px;
+}
+
+.pdf-content{
+   margin: 0px 45px 0px 45px;
+}
+
+.pdf-header-img-div, .pdf-img, .pdf-footer{
+   width: 100%;
+   height: 45px;
+}
+
+.pdf-footer{
+   position: relative;
+   bottom: -85px;
+}
+
+.org-title{
+   text-align: center;
+   color: #95c4e4;
+   margin-top: 2px;
+}
+
+.org-contact-detail{
+   text-align: right;
+   font-size: 12px;
+   margin: -18px 44px 0px 0px;
+}
+
+.name-sect, .ref-sect{
+   display: inline-block;
+   margin-top: 4%;
+   font-weight: bold;
+}
+
+.name-sect{
+   width: 52%;
+   word-spacing: 15px;
+   margin-right: 2%;
+}
+
+.ref-sect{
+   width: 40%;
+   margin-left: 2%;
+}
+
+.loan-detail-div{
+   margin-top: 3%;
+}
+
+.loan-detail-div span{
+   width: 48%;
+   display: inline-block;
+   margin-top: 1.5%;
+}
+
+.detail-title{
+   font-weight: bold;
+   width: 30%;
+}
+
+.disbursement-div{
+   margin-top: 1.5%;
+   font-weight: bold;
+}
+
+.disbursement-title{
+   width: 30%;
+   display: inline-block;
+}
+
+.acct-detail-sect, .signature-sect, .date-sect{
+   width: 49%;
+   display: inline-block;
+   margin-top: 3%;
+}
+
+.chairman-sect{
+   width: 65%;
+}
+
+.secretary-sect{
+   width: 33%;
+}
+
+.exco-signature{
+   margin-bottom: 50px;
+   width: 98%;
+   display: inline-block;
+}
+
+.exco-div span{
+   margin-top: 2%;
+   display: inline-block;
+}
