@@ -5,10 +5,10 @@
 
 	//Creating instances
 	$admin = new Admin();  
-	$admin_id = $admin->getLoggedAdmin();
+	$user_id = $admin->getLoggedAdmin();
 
 	//when not logged in
-	if ( !$admin_id ) 
+	if ( !$user_id ) 
 	{
 		header( "Location: ./", true, 301 );
 		exit();

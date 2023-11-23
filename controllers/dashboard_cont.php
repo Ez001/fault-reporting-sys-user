@@ -4,7 +4,7 @@
    #   Date modified: 21/10/2023 
 
 	//auth
-	include_once( 'admin_auth.php' );
+	include_once( 'user_auth.php' );
 
 
 	//Dashboard interface
