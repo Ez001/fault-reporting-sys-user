@@ -4,7 +4,7 @@
 	include_once( 'App.php' );
 	include_once( 'Encryption.php' );
 
-	class Admin
+	class User
 	{
 		//using Namespaces
 		use App {
@@ -14,7 +14,7 @@
 		use Encryption;
 
 		protected $table = '';
-		const DB_TABLE = 'admins';
+		const DB_TABLE = 'users';
 
 		function __construct()
 	 	{
@@ -30,7 +30,7 @@
 			return $res ?? false;	  
 		}
 
-		function getLoggedAdmin()
+		function getLoggedUser()
 		{
 			return $_COOKIE[ APP_SESS ] ?? 0;
 		}

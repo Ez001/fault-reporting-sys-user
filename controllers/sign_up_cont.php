@@ -3,10 +3,10 @@
 	#   Date created: 17/08/2022 
 	#   Date modified: 12/05/2023  
 
-	include_once( 'models/Admin.php' );
+	include_once( 'models/User.php' );
 	
 	//Creating instances
-	$admin = new Admin(); 
+	$user = new User(); 
 
 	if ( isset( $_POST[ 'sign_up_btn' ] ) ) 
 	{
@@ -20,15 +20,15 @@
 		if ( $first_name && $last_name && $email && $pword ) 
 		{
 			$dt_01 = [ $email ];
-			$get_email = $admin->getCountByEmail( $dt_01 );
+			$get_email = $user->getCountByEmail( $dt_01 );
 
 			if ( !$get_email ) 
 			{
 				$role = 'User';
-				$pword_hash = $admin->encPword( $pword );
+				$pword_hash = $user->encPword( $pword );
 				$dt_01 = [ $email, $role, $pword_hash, $first_name, $last_name ];
 
-				$add_user = $admin->addNew( $dt_01 );
+				$add_user = $user->addNew( $dt_01 );
 
 				if ( $add_user ) 
 				{
