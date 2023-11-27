@@ -38,7 +38,6 @@
                               <th>Fault</th>
                               <th>Description</th>
                               <th>Status</th>
-                              <th>Action</th>
                            </tr>
                         </thead>
                         <tfoot>
@@ -47,7 +46,6 @@
                               <th>Fault</th>
                               <th>Description</th>
                               <th>Status</th>
-                              <th>Action</th>
                            </tr>
                         </tfoot>
                         <tbody>";
@@ -71,9 +69,6 @@
                               <td class='fw-light'> $fault </td>
                               <td class='fw-light'> $description </td>                              
                               <td class='fw-light'> $status </td>
-                              <td class='fw-light'>
-
-                              </td>
                            </tr>";
                         }
 
