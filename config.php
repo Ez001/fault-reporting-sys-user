@@ -1,5 +1,5 @@
 <?php
-   #   Date modified: 12/05/2023  
+   #   Date modified: 22/11/2023  
 
 	const ENVIRONMENT = 'Test';//Test Live
 
@@ -11,8 +11,8 @@
 
 	$msg = '';
 	$clear = false;
-	$website_title = 'Admin - Muazu Foundation Loan';
-	$test_email = 'ezra00100@gmail.com';
+	$website_title = 'Fault Reporting System';
+	$test_email = 'ez@gmail.com';
 
 	const APP_SESS = 'fault_user_id';
 	const APP_SESS_TIME = 3500;
@@ -26,13 +26,6 @@
    //directory
    $root_dir = dirname( __DIR__ );
    $cur_dir = dirname( __FILE__ );
-   //echo getcwd();
-
-   //$upload_dir = "$cur_dir/uploads";
-   //$upload_url = "$server_name/uploads";
-   //$server_name_2 = 'http://';
-   //$upload_dir = '../uploads';
-   //$upload_url = "$server_name_2/uploads";
 
 	$js_modules = [];
 ?> 

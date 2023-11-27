@@ -8,8 +8,8 @@
 
                   <div class="d-flex justify-content-center py-4">
                      <a href="#" class="logo d-flex align-items-center w-auto">
-                     <img src="assets/img/avatar.png" alt="Logo" >
-                        <span class="h2 d-none d-lg-block">Admin</span>
+                     <img src="" >
+                        <span class="h2 d-none d-lg-block">User</span>
                      </a>
                   </div><!-- End Logo -->
 
@@ -46,10 +46,6 @@
                         </form>
 
                      </div>
-                  </div>
-
-                  <div class="credits">
-                     Developed by <a href="https://fixthings.com.ng">FixT</a>
                   </div>
 
                </div>

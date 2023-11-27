@@ -57,15 +57,7 @@
   ?>
   
   <script type="text/javascript">
-    $( document ).ready( () => {
-      $('#my_datatable, #my_datatable_2').DataTable({
-        responsive: true,
-        dom: 'Bfrtip',
-        buttons: [ 'csv', 'excel', 'pdf' ],
-        pageLength: 500,
-        bLengthChange: false
-      });
-    } );
+   
   </script>
 
 </body>

@@ -50,10 +50,6 @@
                      </div>
                   </div>
 
-                  <div class="credits">
-                     Developed by <a href="https://fixthings.com.ng">FixT</a>
-                  </div>
-
                </div>
             </div>
          </div>
