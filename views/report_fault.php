@@ -61,6 +61,7 @@
                            $fault = $faults->getById( [ $fault_id ] );
                            $description = $r_fault_data[ 'description' ];
                            $status = $r_fault_data[ 'status' ];
+                           $status = $web_app->showStatusType( $status );
 
                            $sn++;
                            

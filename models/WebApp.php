@@ -192,15 +192,11 @@
 			
       	if( $status_type )
       	{
-	      	$status_type_x = "<span class='badge bg-danger'> $status_type </span>";
+	      	$status_type_x = "<span class='badge bg-warning'> $status_type </span>";
 
-				if ( $status_type == 'Approved' ) 
+				if ( $status_type == 'Completed' ) 
 				{
 					$status_type_x = "<span class='badge bg-success'> $status_type </span>";
-				}
-				else if ( $status_type == 'Pending' ) 
-				{
-					$status_type_x = "<span class='badge bg-info'> $status_type </span>";
 				}
 			}
 
