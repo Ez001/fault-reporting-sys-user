@@ -109,7 +109,7 @@
                <div class="mb-2">
                   <label for="description" class="fw-bold">Description <span class="text-danger">*</span></label>
                   <div>
-                     <textarea name="description" id="description" class="form-control" maxlength="1000" required><?= $web_app->persistData( 'description', false, $clear ) ?></textarea>
+                     <textarea name="description" id="description" class="form-control" placeholder="Enter Fault Description" maxlength="1000" required><?= $web_app->persistData( 'description', false, $clear ) ?></textarea>
                   </div>
                </div>
                <div class="text-center mt3">

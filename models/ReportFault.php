@@ -38,6 +38,22 @@
 			return $res ?? [];
 		}
 
+		function getCountByUserId( array $dt )
+		{
+			$sql = "SELECT COUNT( id ) AS total FROM $this->table WHERE user_id = ?";
+			$res = $this->fetchData( $sql, $dt );
+
+			return $res['total'] ?? [];
+		}
+
+		function getCountByStatus( array $dt )
+		{
+			$sql = "SELECT COUNT( id ) AS total FROM $this->table WHERE user_id = ? AND status = ?";
+			$res = $this->fetchData( $sql, $dt );
+
+			return $res['total'] ?? [];
+		}
+
 	}
 
 ?>
