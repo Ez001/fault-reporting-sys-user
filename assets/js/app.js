@@ -24,3 +24,4 @@ const makeAjaxCall = async ( url, method, data, ret = false ) => {
       console.error( err );
    }
 };
+

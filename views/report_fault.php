@@ -23,6 +23,8 @@
                      <label for="add_fault_btn" class=""><i class="bi bi-plus-lg"></i> <span class="d-none d-md-inline">Add Fault</span></label>
                      </button>
                   </div>
+                  <div id="alert_msg"></div>
+
                   <?php
                      echo $web_app->showAlert( $msg, true );
       
@@ -38,6 +40,7 @@
                               <th>Fault</th>
                               <th>Description</th>
                               <th>Status</th>
+                              <th>Review Status</th>
                            </tr>
                         </thead>
                         <tfoot>
@@ -45,7 +48,7 @@
                               <th>S/N</th>
                               <th>Fault</th>
                               <th>Description</th>
-                              <th>Status</th>
+                              <th>Review Status</th>
                            </tr>
                         </tfoot>
                         <tbody>";
@@ -62,6 +65,9 @@
                            $description = $r_fault_data[ 'description' ];
                            $status = $r_fault_data[ 'status' ];
                            $status = $web_app->showStatusType( $status );
+                           $review_status = $r_fault_data['review_status'];
+                           $select_state = $review_status == 'Satisfied' ? 'disabled' : '';
+                           $review_status = $web_app->loadReviewStatuses( $review_status );
 
                            $sn++;
                            
@@ -70,6 +76,12 @@
                               <td class='fw-light'> $fault </td>
                               <td class='fw-light'> $description </td>                              
                               <td class='fw-light'> $status </td>
+                              <td class='fw-light'>
+                                 <select name='review_status' $select_state id='review_status' data-id='$id' class='form-select review_status'>
+                                    <option>Select Review Status</option>
+                                    $review_status 
+                                 </select>
+                              </td>
                            </tr>";
                         }
 

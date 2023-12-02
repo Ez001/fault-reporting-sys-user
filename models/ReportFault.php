@@ -54,6 +54,21 @@
 			return $res['total'] ?? [];
 		}
 
+		function updateReviewStatusById( array $dt, $negative = false ) 
+		{
+			$sql = "UPDATE $this->table SET `review_status` = ? WHERE id = ?";
+
+			if ( $negative ) 
+			{
+				$sql = "UPDATE $this->table SET `status` = ?, `review_status` = ? WHERE id = ?";
+			}
+
+			$res = $this->runQuery_2( $sql, $dt );
+
+			return $res ?? false;
+		}
+
+
 	}
 
 ?>

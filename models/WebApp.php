@@ -131,9 +131,9 @@
 			echo $options;
 		}
 
-		function loadStatuses( $sel_id = '' )
+		function loadReviewStatuses( $sel_id = '' )
       {
-         $data_arr = [ 'ACTIVE', 'INACTIVE' ]; 
+         $data_arr = [ 'Satisfied', 'Unsatisfied' ]; 
 
 	      return $this->createOptions( $data_arr, $sel_id );
       }
