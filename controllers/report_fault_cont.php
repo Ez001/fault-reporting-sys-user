@@ -46,12 +46,12 @@
    {
       ob_clean();
 
-		echo "<br><br><br><br><br><br><br><br>k".$reported_fault_id = $_POST['reported_fault_id'];
+		$reported_fault_id = $_POST['reported_fault_id'];
 		$review_status = $_POST['review_status'];
 
 		if ( $reported_fault_id && $review_status ) 
 		{
-			if ( $review_status == 'Satified' ) 
+			if ( $review_status == 'Satisfied' ) 
 			{
 				$update_r_status = $report_fault->updateReviewStatusById( [ $review_status, $reported_fault_id ] );
 			}
@@ -61,9 +61,9 @@
 			}
 		}
 		
-		 $msg = $update_r_status ?	$web_app->showAlertMsg( 'success', 'Review Status Updated!' ) : $web_app->showAlertMsg( 'success', 'Sorry, Review Status Not Updated!' );
+		$_SESSION[ 'msg' ] = $update_r_status ?	$web_app->showAlertMsg( 'success', 'Review Status Updated!' ) : $web_app->showAlertMsg( 'success', 'Sorry, Review Status Not Updated!' );
 		
-      echo json_encode( [ 'msg' => $msg ] );
+      echo $_SESSION[ 'msg' ];
 
       ob_end_flush();
       exit();

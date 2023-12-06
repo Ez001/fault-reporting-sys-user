@@ -64,23 +64,30 @@
                            $fault = $faults->getById( [ $fault_id ] );
                            $description = $r_fault_data[ 'description' ];
                            $status = $r_fault_data[ 'status' ];
-                           $status = $web_app->showStatusType( $status );
+                           $status_x = $web_app->showStatusType( $status );
                            $review_status = $r_fault_data['review_status'];
                            $select_state = $review_status == 'Satisfied' ? 'disabled' : '';
                            $review_status = $web_app->loadReviewStatuses( $review_status );
 
                            $sn++;
+
+                           $review_status_dt = '';
+
+                           if ( $status == 'Completed' )
+                           {
+                              $review_status_dt = "<select name='review_status' $select_state id='review_status' data-id='$id' class='form-select review_status'>
+                                 <option>Select Review Status</option>
+                                 $review_status 
+                              </select>";
+                           }
                            
                            $tr_content .=  "<tr>
                               <td class='fw-light'> $sn </td>
                               <td class='fw-light'> $fault </td>
                               <td class='fw-light'> $description </td>                              
-                              <td class='fw-light'> $status </td>
+                              <td class='fw-light'> $status_x </td>
                               <td class='fw-light'>
-                                 <select name='review_status' $select_state id='review_status' data-id='$id' class='form-select review_status'>
-                                    <option>Select Review Status</option>
-                                    $review_status 
-                                 </select>
+                                 $review_status_dt
                               </td>
                            </tr>";
                         }
