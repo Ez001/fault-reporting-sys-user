@@ -30,7 +30,7 @@
 
 				if ( $add_user ) 
 				{
-					$msg = $web_app->showAlertMsg( 'success', 'Record Added' );
+					$msg = $web_app->showAlertMsg( 'success', 'Registration Completed!' );
 					$clear = true;
 				} 
 				else 
