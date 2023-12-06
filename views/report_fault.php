@@ -40,6 +40,7 @@
                               <th>Fault</th>
                               <th>Description</th>
                               <th>Status</th>
+                              <th>Feed Back</th>
                               <th>Review Status</th>
                            </tr>
                         </thead>
@@ -48,6 +49,8 @@
                               <th>S/N</th>
                               <th>Fault</th>
                               <th>Description</th>
+                              <th>Status</th>
+                              <th>Feed Back</th>
                               <th>Review Status</th>
                            </tr>
                         </tfoot>
@@ -68,7 +71,8 @@
                            $review_status = $r_fault_data['review_status'];
                            $select_state = $review_status == 'Satisfied' ? 'disabled' : '';
                            $review_status = $web_app->loadReviewStatuses( $review_status );
-
+                           $feed_back = $r_fault_data[ 'feed_back' ];
+                           
                            $sn++;
 
                            $review_status_dt = '';
@@ -76,7 +80,7 @@
                            if ( $status == 'Completed' )
                            {
                               $review_status_dt = "<select name='review_status' $select_state id='review_status' data-id='$id' class='form-select review_status'>
-                                 <option>Select Review Status</option>
+                                 <option value=''>Select Review Status</option>
                                  $review_status 
                               </select>";
                            }
@@ -86,6 +90,7 @@
                               <td class='fw-light'> $fault </td>
                               <td class='fw-light'> $description </td>                              
                               <td class='fw-light'> $status_x </td>
+                              <td class='fw-light'> $feed_back </td>
                               <td class='fw-light'>
                                  $review_status_dt
                               </td>
